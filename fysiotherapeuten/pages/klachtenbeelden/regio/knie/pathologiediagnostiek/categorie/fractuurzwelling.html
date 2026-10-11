@@ -11,14 +11,14 @@
 </head>
 
 <body class="role-fysiotherapeut">
-  <!-- Tabs -->
+  <!-- TABS -->
   <div class="tab-nav">
     <button class="tab-link active" data-tab="fractuur">Fractuur</button>
     <button class="tab-link" data-tab="zwelling">Zwelling</button>
     <button class="tab-link" data-tab="bursitis">Bursitis</button>
   </div>
 
-  <!-- Tab Fractuur -->
+  <!-- TAB FRACTUUR -->
   <div id="fractuur" class="tab-content active">
     <div class="container-theorie">
       <div class="text-section">
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <!-- Full-width Symptomen sectie -->
+    <!-- SYMPTOMEN SECTION -->
     <div class="symptomen">
       <div class="symptomen-container">
         <h2>Symptomen</h2>
@@ -50,12 +50,12 @@
       </div>
     </div>
 
-    <!-- Testen Fractuur -->
+    <!-- TESTEN FRACTUUR -->
     <div class="container-theorie">
       <div class="text-section">
         <h2>Testen</h2>
         <div class="test-item-info">
-          <button class="test-toggle-info">
+          <button type="button" class="test-toggle-info" aria-expanded="false">
             <span class="toggle-text">Ottawa Knee Rules</span>
             <span class="arrow">&#9660;</span>
           </button>
@@ -77,7 +77,7 @@
     </div>
   </div>
 
-  <!-- Tab Zwelling -->
+  <!-- TAB ZWELLING -->
   <div id="zwelling" class="tab-content">
     <div class="container-theorie">
       <div class="text-section">
@@ -142,7 +142,7 @@
       </div>
     </div>
 
-    <!-- Full-width Symptomen sectie -->
+    <!-- SYMPTOMEN SECTION -->
     <div class="symptomen">
       <div class="symptomen-container">
         <h2>Symptomen</h2>
@@ -162,72 +162,83 @@
       <div class="text-section">
         <h2>Testen</h2>
         <div class="test-item-info">
-          <button class="test-toggle-info">
+          <button type="button" class="test-toggle-info" aria-expanded="false">
             <span class="toggle-text">Strijktesten</span>
             <span class="arrow">&#9660;</span>
           </button>
           <div class="test-content-info">
-            <div class="test-content">
-              <div class="grid-tests">
-                <!-- Vak 1: Uitgangshouding -->
-                <div class="vak">
-                  <h4>Uitgangshouding</h4>
-                  <p>
-                    De patiënt ligt in ruglig op de onderzoeksbank met de benen gestrekt. Tijdens het
-                    rotatieonderzoek kan de knie in lichte flexie worden gebracht.
-                  </p>
-                  <img src="../../../../../../img/knie/testen/test.webp" alt="Uitgangshouding strijktest"
-                    class="img-vak1" />
+
+            <div class="test-stappen">
+
+              <div class="test-stappen-lijn">
+
+                <!-- STAP 1: UITGANGSHOUDING -->
+                <div class="test-stap">
+                  <div class="test-stap-tekst">
+                    <h4>Uitgangshouding</h4>
+                    <p>
+                      De patiënt ligt in ruglig op de onderzoeksbank met de benen gestrekt. Tijdens het
+                      rotatieonderzoek kan de knie in lichte flexie worden gebracht.
+                    </p>
+                  </div>
+                  <div class="test-stap-media">
+                    <img src="../../../../../../img/knie/testen/test.webp" alt="Uitgangshouding strijktest"
+                      loading="lazy" />
+                  </div>
                 </div>
 
-                <!-- Vak 2: Uitvoering -->
-                <div class="vak">
-                  <h4>Uitvoering</h4>
-                  <p>
-                    De strijktest wordt uitgevoerd om zwelling in de knie te beoordelen:
-                  </p>
-                  <ul>
-                    <li>
-                      Strijk met de hand eerst het mediale kniekapsel naar
-                      proximaal leeg <strong class="benadrukking">(a)</strong>.
-                    </li>
-                    <li>
-                      Strijk daarna met de hand de laterale zijde naar proximaal
-                      leeg <strong class="benadrukking">(b)</strong>.
-                    </li>
-                  </ul>
-                  <p>
-                    De test is positief als het kuiltje aan de mediale zijde
-                    zich opnieuw vult.
-                  </p>
+                <!-- STAP 2: UITVOERING -->
+                <div class="test-stap reverse">
+                  <div class="test-stap-tekst">
+                    <h4>Uitvoering</h4>
+                    <p>
+                      De strijktest wordt uitgevoerd om zwelling in de knie te beoordelen:
+                    </p>
+                    <ul>
+                      <li>
+                        Strijk met de hand eerst het mediale kniekapsel naar
+                        proximaal leeg <strong class="benadrukking">(a)</strong>.
+                      </li>
+                      <li>
+                        Strijk daarna met de hand de laterale zijde naar proximaal
+                        leeg <strong class="benadrukking">(b)</strong>.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="test-stap-media">
+                    <video controls>
+                      <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4" />
+                      Je browser ondersteunt dit videoformaat niet.
+                    </video>
+                  </div>
                 </div>
 
-                <!-- Vak 3: Interpretatie -->
-                <div class="vak">
-                  <h4>Positieve test</h4>
+              </div>
+
+              <!-- STAP 3: POSITIEVE TEST -->
+              <div class="test-stap-full">
+                <h4>Positieve test</h4>
+                <p class="positive-test-intro">
+                  De test is positief als het kuiltje aan de mediale zijde
+                  zich opnieuw vult.
+                </p>
+                <div class="icon-list-wrapper">
                   <ul class="icon-list">
                     <li>
-                      <i class="fa-solid fa-check icon"></i>Niet verplaatsbare
-                      zwelling →
-                      <strong class="benadrukking">synovitis</strong>
+                      <i class="fa-solid fa-check icon"></i>
+                      <span>Niet verplaatsbare zwelling → <strong class="benadrukking">synovitis</strong></span>
                     </li>
                     <li>
-                      <i class="fa-solid fa-check icon"></i>Wel verplaatsbare
-                      zwelling → <strong class="benadrukking">hydrops</strong>,
-                      wijst op meniscusletsel
+                      <i class="fa-solid fa-check icon"></i>
+                      <span>Wel verplaatsbare zwelling → <strong class="benadrukking">hydrops</strong>, wijst op
+                        meniscusletsel</span>
                     </li>
                   </ul>
                 </div>
-
-                <div class="vak">
-                  <h4>Filmpje</h4>
-                  <video width="100%" height="200" controls>
-                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4" />
-                    Je browser ondersteunt dit videoformaat niet.
-                  </video>
-                </div>
               </div>
+
             </div>
+
           </div>
         </div>
       </div>

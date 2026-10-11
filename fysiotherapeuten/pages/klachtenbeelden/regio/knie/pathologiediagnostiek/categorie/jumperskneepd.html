@@ -2,16 +2,16 @@
 <html lang="nl">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fysiodex - Jumpersknee & Patellatendinopathie</title>
-    <link rel="stylesheet" href="../../../../../../../shared/css/styles.css" />
-    <link rel="stylesheet" href="./PathologieDiagnostiek.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../../../../../../shared/css/styles.css">
+    <link rel="stylesheet" href="./PathologieDiagnostiek.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="role-fysiotherapeut">
-    <!-- Jumpersknee & Patellatendinopathie -->
+    <!-- JUMPERSKNEE & PATELLATENDINOPATHIE -->
     <div class="container-theorie">
         <div class="text-section">
             <h2>Jumpersknee (patellatendinopathie)</h2>
@@ -46,20 +46,20 @@
             <ul>
                 <li><strong>Intrinsiek:</strong> slechte mobiliteit, roken, genetica (genetisch dispositie), hogere
                     leeftijd, vrouwelijk geslacht</li>
-                <li><strong>Extrensiek:</strong> trainingsbelasting, onvoldoende herstel, abrupte wijzigingen in
+                <li><strong>Extrinsiek:</strong> trainingsbelasting, onvoldoende herstel, abrupte wijzigingen in
                     trainingsarbeid</li>
                 <li><strong>Andere:</strong> mannelijk geslacht, hoge BMI, verminderde dorsaalflexie</li>
             </ul>
         </div>
     </div>
 
-    <!-- Full-width Symptomen sectie -->
+    <!-- FULL-WIDTH SYMPTOMEN SECTIE -->
     <div class="symptomen">
         <div class="symptomen-container">
             <h2>Symptomen</h2>
             <ul>
                 <li>Geen traumamoment</li>
-                <li>Vaak voorkomend bij jongens die actief sporten (volleyballers & basketballers)</li>
+                <li>Vaak voorkomend bij jongens die actief sporten (volleyballers &amp; basketballers)</li>
                 <li>Pijn bij explosief sporten</li>
                 <li>Pijn is met 1 vinger aan te wijzen</li>
                 <li>Pijn bij palpatie apex patella</li>
@@ -68,70 +68,92 @@
         </div>
     </div>
 
-    <!-- Passieve Bewegingsonderzoeken (ROM) -->
+    <!-- TESTEN -->
     <div class="container-theorie">
         <div class="text-section">
             <h2>Testen</h2>
-            <div class="test-item-info">
+
+            <!-- STATIC: PALPATIE PATELLAPEES -->
+            <div class="test-item-info static">
                 <div class="test-static-info">
                     <span class="toggle-text">Palpatie patellapees</span>
                 </div>
             </div>
 
+            <!-- SINGLE LEG DECLINE SQUAT TEST -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Single leg decline squat test</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt staat met één been op de decline plank.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1" />
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De patiënt gaat met het aangedane been op een decline plank van 25 graden staan. De
-                                    patiënt buigt geleidelijk door de knie.</p>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn bij apex patella tijdens uitvoering
-                                    </li>
-                                </ul>
-                                <p><em><strong>*Opmerking:</strong> Deze test werkt alleen later in de tendinopathie, in
-                                        de beginfase kun je beter ADL-functies vragen (bijv rennen, springen,
-                                        landen)</em></p>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.71</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.79</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt staat met één been op de decline plank.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Single leg decline squat test" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4" />
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>De patiënt gaat met het aangedane been op een decline plank van 25 graden staan.
+                                        De patiënt buigt geleidelijk door de knie.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
                             </div>
+
                         </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Pijn bij apex patella tijdens uitvoering</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.71</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.79</span>
+                            </div>
+                            <p class="positive-test-intro" style="margin-top: 1.25rem;">
+                                <em><strong>*Opmerking:</strong> Deze test werkt alleen later in de tendinopathie, in
+                                    de beginfase kun je beter ADL-functies vragen (bijv. rennen, springen,
+                                    landen).</em>
+                            </p>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
+
     <script src="../../../../../../../shared/scripts/tekst.js"></script>
 </body>
 

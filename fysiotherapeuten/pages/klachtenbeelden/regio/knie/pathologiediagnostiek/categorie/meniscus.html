@@ -11,7 +11,8 @@
 </head>
 
 <body class="role-fysiotherapeut">
-    <!-- Meniscus -->
+
+    <!-- MENISCUS -->
     <div class="container-theorie">
         <div class="text-section">
             <h2>Meniscus</h2>
@@ -26,7 +27,7 @@
         </div>
     </div>
 
-    <!-- Full-width Symptomen sectie -->
+    <!-- FULL-WIDTH SYMPTOMEN SECTIE -->
     <div class="symptomen">
         <div class="symptomen-container">
             <h2>Symptomen</h2>
@@ -42,290 +43,400 @@
         </div>
     </div>
 
-    <!-- McMurray Test -->
+    <!-- TESTEN MENISCUS -->
     <div class="container-theorie">
         <div class="text-section">
             <h2>Testen Meniscus</h2>
+
+            <!-- MCMURRAY TEST -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">McMurray Test</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig met de knie in volledige (maximale) flexie...</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>Vanuit de volledig geflecteerde knie beweegt de fysiotherapeut het been passief met:
-                                </p>
-                                <ul>
-                                    <li><strong class="benadrukking">Exorotatie + adductie</strong> → extensie =
-                                        <em>mediale meniscus</em>
-                                    </li>
-                                    <li><strong class="benadrukking">Endorotatie + abductie</strong> → extensie =
-                                        <em>laterale meniscus</em>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Vastloper of blokkade</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Klikkend of knakkend geluid</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.61</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.84</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig met de knie in volledige (maximale) flexie.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding McMurray test" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>Vanuit de volledig geflecteerde knie beweegt de fysiotherapeut het been passief
+                                        met:</p>
+                                    <ul>
+                                        <li><strong class="benadrukking">Exorotatie + adductie</strong> → extensie =
+                                            <em>mediale meniscus</em>
+                                        </li>
+                                        <li><strong class="benadrukking">Endorotatie + abductie</strong> → extensie =
+                                            <em>laterale meniscus</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van één of meerdere onderstaande bevindingen.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Vastloper of blokkade</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Klikkend of knakkend geluid</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Pijn</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.61</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.84</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- Joint Line Tenderness Test -->
+            <!-- JOINT LINE TENDERNESS TEST -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Joint Line Tenderness Test</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig met de knie 90° gebogen.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut palpeert de gewrichtslijn mediaal en lateraal.</p>
-                                <ul>
-                                    <li><strong class="benadrukking">Mediale meniscus</strong>: voet in
-                                        <em>exorotatie</em>
-                                    </li>
-                                    <li><strong class="benadrukking">Laterale meniscus</strong>: voet in
-                                        <em>endorotatie</em>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Duidelijk pijnpunt</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensiviteit</h4>
-                                    <span class="value">0.83</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.83</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig met de knie 90° gebogen.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Joint Line Tenderness Test" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut palpeert de gewrichtslijn mediaal en lateraal.</p>
+                                    <ul>
+                                        <li><strong class="benadrukking">Mediale meniscus</strong>: voet in
+                                            <em>exorotatie</em>
+                                        </li>
+                                        <li><strong class="benadrukking">Laterale meniscus</strong>: voet in
+                                            <em>endorotatie</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van onderstaande bevinding.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Duidelijk pijnpunt</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.83</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.83</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- Passieve Extensietest -->
+            <!-- PASSIEVE EXTENSIETEST -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Passieve Extensietest</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig op de onderzoeksbank.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut maakt passieve extensie in het kniegewricht.</p>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Verschil in bewegingsuitslag en/of pijn
-                                        bij de passieve (hyper)extensiestand</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.26</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.85</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig op de onderzoeksbank.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Passieve Extensietest" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut maakt passieve extensie in het kniegewricht.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van onderstaande bevinding.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Verschil in bewegingsuitslag en/of pijn bij de passieve
+                                            (hyper)extensiestand</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.26</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.85</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- Passieve Flexietest -->
+            <!-- PASSIEVE FLEXIETEST -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Passieve Flexietest</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig op de onderzoeksbank.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut maakt passieve flexie in het kniegewricht.</p>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Beperkingen in de passieve knieflexie en
-                                        of pijn bij diepe flexiestand.</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.48</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.59</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig op de onderzoeksbank.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Passieve Flexietest" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut maakt passieve flexie in het kniegewricht.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van onderstaande bevinding.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Beperkingen in de passieve knieflexie en/of pijn bij diepe
+                                            flexiestand</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.48</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.59</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- Thessaly-test -->
+            <!-- THESSALY-TEST -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Thessaly-test</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt staat met de armen horizontaal voor zich uitgestrekt en steunt op één
-                                    been. De knie van het standbeen wordt gebogen tot 0° en vervolgens tot ongeveer 20°
-                                    flexie.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>In beide posities (0° en 20° flexie) voert de patiënt driemaal een draaiende beweging
-                                    uit van het bovenlichaam ten opzichte van het standbeen, zowel linksom als rechtsom.
-                                    De fysiotherapeut ondersteunt indien nodig voor balans, maar de patiënt voert de
-                                    rotatie zelf uit.</p>
-                                <ul>
-                                    <li>Start met de knie in <strong class="benadrukking">0° flexie</strong> → draai
-                                        driemaal heen en weer</li>
-                                    <li>Herhaal met de knie in <strong class="benadrukking">20° flexie</strong> → draai
-                                        driemaal heen en weer</li>
-                                </ul>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn in het kniegewricht</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Klikkend of blokkerend gevoel</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Gevoel van instabiliteit of door de knie
-                                        zakken</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.70</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.55</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt staat met de armen horizontaal voor zich uitgestrekt en steunt op één
+                                        been. De knie van het standbeen wordt gebogen tot 0° en vervolgens tot ongeveer
+                                        20° flexie.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Thessaly-test" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>In beide posities (0° en 20° flexie) voert de patiënt driemaal een draaiende
+                                        beweging uit van het bovenlichaam ten opzichte van het standbeen, zowel linksom
+                                        als rechtsom. De fysiotherapeut ondersteunt indien nodig voor balans, maar de
+                                        patiënt voert de rotatie zelf uit.</p>
+                                    <ul>
+                                        <li>Start met de knie in <strong class="benadrukking">0° flexie</strong> → draai
+                                            driemaal heen en weer</li>
+                                        <li>Herhaal met de knie in <strong class="benadrukking">20° flexie</strong> →
+                                            draai driemaal heen en weer</li>
+                                    </ul>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van één of meerdere onderstaande bevindingen.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Pijn in het kniegewricht</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Klikkend of blokkerend gevoel</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Gevoel van instabiliteit of door de knie zakken</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.70</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.55</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
+
     <script src="../../../../../../../shared/scripts/tekst.js"></script>
 </body>
 
