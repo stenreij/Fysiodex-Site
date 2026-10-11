@@ -1,7 +1,18 @@
+/* ============================================
+   CONTAINER
+   ============================================ */
 .container {
-    height: calc(100vh - 80px);
+    flex: 1;
+    height: auto;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* ============================================
+   INTRO
+   ============================================ */
 .intro {
     text-align: center;
     margin-top: 3rem;
@@ -31,21 +42,23 @@
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     margin: 0 auto 1.5rem;
 }
 
 #model-container {
     position: relative;
-    width: 350px;
-    aspect-ratio: 1 / 2;
+    width: 100%;
     overflow: hidden;
+    margin: -4rem auto;
 }
 
-#model-container model-viewer {
-    width: 100%;
-    height: 100%;
+#model-container canvas {
+    position: absolute;
+    inset: 0;
     display: block;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* ============================================
@@ -62,7 +75,7 @@
     }
 
     .image-container {
-        max-width: 320px;
+        max-width: 400px;
     }
 }
 
@@ -73,9 +86,5 @@
 
     .image-container {
         max-width: 100%;
-    }
-
-    #model-container {
-        aspect-ratio: 1 / 1;
     }
 }
