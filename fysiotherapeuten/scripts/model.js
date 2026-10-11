@@ -33,7 +33,7 @@ const camera = new THREE.PerspectiveCamera(
   1000,
 );
 
-camera.position.set(0, 1, 3);
+camera.position.set(0, 1, 3.25);
 
 // RENDERER
 const renderer = new THREE.WebGLRenderer({
@@ -41,7 +41,7 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true,
 });
 
-renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setSize(container.clientWidth, container.clientHeight, false);
 renderer.setPixelRatio(window.devicePixelRatio);
 container.appendChild(renderer.domElement);
 
@@ -75,11 +75,22 @@ const DRAG_THRESHOLD = 5;
 let lastMouseX = 0;
 let lastMouseY = 0;
 
+// FUNCTIE: Containerhoogte aanpassen aan model
+function fitContainerToModel() {
+  if (!model) return;
+
+  const box = new THREE.Box3().setFromObject(model);
+  const size = box.getSize(new THREE.Vector3());
+
+  // Zet de aspect-ratio van de container op basis van de modelgrootte
+  container.style.aspectRatio = `${size.x} / ${size.y}`;
+}
+
 // MOUSE DOWN
 container.addEventListener("mousedown", (event) => {
   mouseDownPos = {
     x: event.clientX,
-    y: event.clientY
+    y: event.clientY,
   };
   isDragging = false;
 });
@@ -89,7 +100,7 @@ container.addEventListener("mousemove", (event) => {
   if (mouseDownPos) {
     const dx = Math.abs(event.clientX - mouseDownPos.x);
     const dy = Math.abs(event.clientY - mouseDownPos.y);
-    
+
     if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
       isDragging = true;
     }
@@ -126,20 +137,44 @@ loader.load(
 
     model.position.sub(center);
 
-    camera.position.set(0, 1, 2.5);
+    // CONTAINER ASPECT RATIO BASED ON MODEL SIZE
+    fitContainerToModel();
+
+    camera.position.set(0, 1, 3.25);
     controls.target.set(0, 0, 0);
     controls.update();
 
     // CLICKABLE PARTS
     const clickableParts = {
-      "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd, Nek & Hals" },
-      "Schouder&Bovenarm": { route: "./Regio/Schouder/schouder.html", label: "Schouder & Bovenarm" },
-      "Wervelkolom": { route: "./Regio/Wervelkolom/wervelkolom.html", label: "Wervelkolom" },
-      "Torax&Buik&Inwendigeorganen": { route: "./Regio/Torax/torax.html", label: "Thorax, Buik & Inwendige Organen" },
-      "Elleboog&Hand": { route: "./Regio/Elleboog/elleboog.html", label: "Elleboog, Pols & Hand" },
-      "Bekken&Bovenbeen": { route: "./Regio/Bekken/bekken.html", label: "Heup, Bekken & Bovenbeen" },
+      "Hoofd&Hals": {
+        route: "./Regio/Hoofd/hoofd.html",
+        label: "Hoofd, Nek & Hals",
+      },
+      "Schouder&Bovenarm": {
+        route: "./Regio/Schouder/schouder.html",
+        label: "Schouder & Bovenarm",
+      },
+      "Wervelkolom": {
+        route: "./Regio/Wervelkolom/wervelkolom.html",
+        label: "Wervelkolom",
+      },
+      "Torax&Buik&Inwendigeorganen": {
+        route: "./Regio/Torax/torax.html",
+        label: "Thorax, Buik & Inwendige Organen",
+      },
+      "Elleboog&Hand": {
+        route: "./Regio/Elleboog/elleboog.html",
+        label: "Elleboog, Pols & Hand",
+      },
+      "Bekken&Bovenbeen": {
+        route: "./Regio/Bekken/bekken.html",
+        label: "Heup, Bekken & Bovenbeen",
+      },
       "Knie": { route: "./Regio/Knie/knie.html", label: "Knie" },
-      "Onderbeen&Voet": { route: "./Regio/Onderbeen/onderbeen.html", label: "Onderbeen, Enkel & Voet" },
+      "Onderbeen&Voet": {
+        route: "./Regio/Onderbeen/onderbeen.html",
+        label: "Onderbeen, Enkel & Voet",
+      },
     };
 
     model.traverse((child) => {
@@ -152,7 +187,12 @@ loader.load(
         child.userData.clickable = true;
         child.userData.route = clickableParts[child.name].route;
         child.userData.label = clickableParts[child.name].label;
-        console.log("Clickable part found:", child.name, "- Label:", child.userData.label);
+        console.log(
+          "Clickable part found:",
+          child.name,
+          "- Label:",
+          child.userData.label,
+        );
       }
     });
 
@@ -166,32 +206,34 @@ loader.load(
 window.addEventListener("mousemove", (event) => {
   lastMouseX = event.clientX;
   lastMouseY = event.clientY;
-  
+
   const rect = container.getBoundingClientRect();
-  
-  if (event.clientX >= rect.left && event.clientX <= rect.right &&
-      event.clientY >= rect.top && event.clientY <= rect.bottom) {
+
+  if (
+    event.clientX >= rect.left &&
+    event.clientX <= rect.right &&
+    event.clientY >= rect.top &&
+    event.clientY <= rect.bottom
+  ) {
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
-  
+
   // RESPONSIVE TOOLTIP POSITIONING
   if (tooltip.style.display === "block") {
     const containerRect = container.getBoundingClientRect();
     const relativeX = event.clientX - containerRect.left;
     const relativeY = event.clientY - containerRect.top;
-    
-    // RESPONSIVE OFFSET BASED ON CONTAINER SIZE
+
     const offsetX = Math.max(15, containerRect.width * 0.05);
     const offsetY = Math.max(30, containerRect.height * 0.05);
-    
+
     let leftPos = relativeX + offsetX;
     let topPos = relativeY - offsetY;
-    
-    // CHECK IF TOOLTIP GOES OUT OF BOUNDS AND ADJUST
+
     const tooltipWidth = tooltip.offsetWidth;
     const tooltipHeight = tooltip.offsetHeight;
-    
+
     if (leftPos + tooltipWidth > containerRect.width) {
       leftPos = relativeX - tooltipWidth - 10;
     }
@@ -201,7 +243,7 @@ window.addEventListener("mousemove", (event) => {
     if (leftPos < 0) {
       leftPos = 10;
     }
-    
+
     tooltip.style.left = leftPos + "px";
     tooltip.style.top = topPos + "px";
   }
@@ -211,8 +253,12 @@ window.addEventListener("mousemove", (event) => {
 window.addEventListener("scroll", () => {
   if (lastMouseX && lastMouseY) {
     const rect = container.getBoundingClientRect();
-    if (lastMouseX >= rect.left && lastMouseX <= rect.right &&
-        lastMouseY >= rect.top && lastMouseY <= rect.bottom) {
+    if (
+      lastMouseX >= rect.left &&
+      lastMouseX <= rect.right &&
+      lastMouseY >= rect.top &&
+      lastMouseY <= rect.bottom
+    ) {
       mouse.x = ((lastMouseX - rect.left) / rect.width) * 2 - 1;
       mouse.y = -((lastMouseY - rect.top) / rect.height) * 2 + 1;
     }
@@ -225,7 +271,7 @@ container.addEventListener("click", (event) => {
     console.log("Drag detected, ignoring click");
     return;
   }
-  
+
   if (!model) {
     console.log("Model not loaded yet");
     return;
@@ -292,7 +338,7 @@ function checkHover() {
     hit.material.emissiveIntensity = 0.3;
   }
 
-  // ShHOW TOOLTIP
+  // SHOW TOOLTIP
   if (hit.userData.label) {
     tooltip.textContent = hit.userData.label;
     tooltip.style.display = "block";
@@ -302,11 +348,19 @@ function checkHover() {
 }
 
 // RESIZING HANDLER
-window.addEventListener("resize", () => {
-  camera.aspect = container.clientWidth / container.clientHeight;
+const resizeObserver = new ResizeObserver(() => {
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+
+  if (!width || !height) return;
+
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  renderer.setSize(container.clientWidth, container.clientHeight);
+
+  renderer.setSize(width, height, false);
 });
+
+resizeObserver.observe(container);
 
 // ANIMATION LOOP
 function animate() {
