@@ -11,7 +11,7 @@
 </head>
 
 <body class="role-fysiotherapeut">
-    <!-- iliotibiaalbandsyndroom -->
+    <!-- ILIOTIBIAALBANDSYNDROOM -->
     <div class="container-theorie">
         <div class="text-section">
             <h2>Iliotibiaalbandsyndroom</h2>
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <!-- Full-width Symptomen sectie -->
+    <!-- FULL-WIDTH SYMPTOMEN SECTIE -->
     <div class="symptomen">
         <div class="symptomen-container">
             <h2>Symptomen</h2>
@@ -41,111 +41,154 @@
     <div class="container-theorie">
         <div class="text-section">
             <h2>Testen</h2>
+
+            <!-- TEST VAN NOBLE -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Test van Noble</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in zijlig met het aangedane been boven. De fysiotherapeut staat
-                                    achter de patiënt.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut tilt een beetje het been op en pakt met een hand bij de boven de
-                                    knie en een hand bij de enkel.
-                                    Daarna wordt flexie en extensie gemaakt tussen 30 en 80 graden flexie,
-                                    terwijl de fysiotherapeut compressie uitvoert op het laterale condyl.</p>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn bij het uitvoeren van de test</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.88</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.90</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in zijlig met het aangedane been boven. De fysiotherapeut staat
+                                        achter de patiënt.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Test van Noble" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut tilt een beetje het been op en pakt met een hand bij de boven
+                                        de knie en een hand bij de enkel.
+                                        Daarna wordt flexie en extensie gemaakt tussen 30 en 80 graden flexie,
+                                        terwijl de fysiotherapeut compressie uitvoert op het laterale condyl.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van onderstaande bevinding.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Pijn bij het uitvoeren van de test</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.88</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.90</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- Test van Renne -->
+            <!-- TEST VAN RENNE -->
             <div class="test-item-info">
-                <button class="test-toggle-info">
+                <button type="button" class="test-toggle-info" aria-expanded="false">
                     <span class="toggle-text">Test van Renne</span>
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>Patiënt staat en doet met het aangedane been een stap naar voren. De fysiotherapeut
-                                    knielt bij het been.</p>
-                                <img src="../../../../../../img/knie/testen/test.webp" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut palpeert de tractus iliotibialis bij de laterale femurcondyl. Met
-                                    zijn andere hand duwt hij het onderbeen naar voren en
-                                    achteren, terwijl hij compressie geeft op het laterale condyl.</p>
-                            </div>
+                    <div class="test-stappen">
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn bij het uitvoeren van de test</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.86</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.74</span>
+                        <div class="test-stappen-lijn">
+
+                            <!-- STAP 1: UITGANGSHOUDING -->
+                            <div class="test-stap">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>Patiënt staat en doet met het aangedane been een stap naar voren. De
+                                        fysiotherapeut knielt bij het been.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <img src="../../../../../../img/knie/testen/test.webp"
+                                        alt="Uitgangshouding Test van Renne" loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                            <!-- STAP 2: UITVOERING -->
+                            <div class="test-stap reverse">
+                                <div class="test-stap-tekst">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut palpeert de tractus iliotibialis bij de laterale femurcondyl.
+                                        Met zijn andere hand duwt hij het onderbeen naar voren en
+                                        achteren, terwijl hij compressie geeft op het laterale condyl.</p>
+                                </div>
+                                <div class="test-stap-media">
+                                    <video controls>
+                                        <source src="../../../../../../video/knie/testen/VID-20201128-WA0009.mp4"
+                                            type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- STAP 3: POSITIEVE TEST -->
+                        <div class="test-stap-full">
+                            <h4>Positieve test</h4>
+                            <p class="positive-test-intro">
+                                De test is positief bij herkenning van onderstaande bevinding.
+                            </p>
+                            <div class="icon-list-wrapper">
+                                <ul class="icon-list">
+                                    <li>
+                                        <i class="fa-solid fa-check icon"></i>
+                                        <span>Pijn bij het uitvoeren van de test</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-parameters">
+                                <h4>Sensitiviteit</h4>
+                                <span class="value">0.86</span>
+                                <h4>Specificiteit</h4>
+                                <span class="value">0.74</span>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
+
     <script src="../../../../../../../shared/scripts/tekst.js"></script>
 </body>
+
 </html>
