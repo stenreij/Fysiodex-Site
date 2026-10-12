@@ -26,3 +26,4 @@ Het doel van Fysiodex is om zowel patiënten als geïnteresseerden op een laagdr
 - HTML
 - CSS
 - JavaScript
+- Three.js
