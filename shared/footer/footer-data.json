@@ -2,7 +2,7 @@
   "company": {
     "name": "Fysiodex",
     "tagline": "Professionele zorg met een persoonlijke touch. Samen werken we aan uw herstel.",
-    "copyright": "© 2026 Fysiodex. Alle rechten voorbehouden."
+    "copyright": "© {year} Fysiodex."
   },
   "social": {
     "facebook": "#",
@@ -10,7 +10,9 @@
     "linkedin": "#"
   },
   "quickLinks": [
-    { "name": "Home", "url": "/index.html" }
+    { "name": "Home", "url": "/index.html" },
+    { "name": "Over Fysiodex", "url": "/shared/pages/overfysiodex.html" },
+    { "name": "Contact", "url": "/shared/pages/overfysiodex.html#contact-container" }
   ],
   "contact": {
     "address": "Straatnaam 123, 1234 AB Stad [vanuit JSON :)]",
