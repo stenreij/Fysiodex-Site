@@ -1,28 +1,39 @@
-const jsonPathFooter = '/shared/footer/footer-data.json';
+const jsonPathFooter = "/shared/footer/footer-data.json";
 
 fetch(jsonPathFooter)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     
-    // Company info
-    document.getElementById('footer-company-name').textContent = data.company.name;
-    document.getElementById('footer-tagline').textContent = data.company.tagline;
-    document.getElementById('footer-copyright').textContent = data.company.copyright;
-    
-    // Social links
-    document.getElementById('footer-social-fb').href = data.social.facebook;
-    document.getElementById('footer-social-ig').href = data.social.instagram;
-    document.getElementById('footer-social-li').href = data.social.linkedin;
-    
-    // SiteLinks
-    const quickLinksList = document.getElementById('footer-quicklinks');
-    quickLinksList.innerHTML = data.quickLinks.map(link => 
-      `<li><a href="${link.url}">${link.name}</a></li>`
-    ).join('');
-    
-    // Contact info
-    document.getElementById('footer-address').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.contact.address}`;
-    document.getElementById('footer-phone').innerHTML = `<i class="fas fa-phone"></i> ${data.contact.phone}`;
-    document.getElementById('footer-email').innerHTML = `<i class="fas fa-envelope"></i> ${data.contact.email}`;
+    // FYSIODEX INFO
+    document.getElementById("footer-company-name").textContent =
+      data.company.name;
+    document.getElementById("footer-tagline").textContent =
+      data.company.tagline;
+    document.getElementById("footer-copyright").textContent =
+      data.company.copyright;
+
+    // SOCIAL MEDIA LINKS
+    document.getElementById("footer-social-fb").href = data.social.facebook;
+    document.getElementById("footer-social-ig").href = data.social.instagram;
+    document.getElementById("footer-social-li").href = data.social.linkedin;
+
+    // SITELINKS
+    const quickLinksList = document.getElementById("footer-quicklinks");
+    quickLinksList.innerHTML = data.quickLinks
+      .map((link) => `<li><a href="${link.url}">${link.name}</a></li>`)
+      .join("");
+
+    // CONTACT INFO
+    document.getElementById("footer-address").innerHTML =
+      `<i class="fas fa-map-marker-alt"></i> ${data.contact.address}`;
+    document.getElementById("footer-phone").innerHTML =
+      `<i class="fas fa-phone"></i> ${data.contact.phone}`;
+    document.getElementById("footer-email").innerHTML =
+      `<i class="fas fa-envelope"></i> ${data.contact.email}`;
+
+    //COPYRIGHT YEAR
+    const year = new Date().getFullYear();
+    document.getElementById("footer-copyright").textContent =
+      data.company.copyright.replace("{year}", year);
   })
-  .catch(error => console.error('Error loading footer data:', error));
+  .catch((error) => console.error("Error loading footer data:", error));
