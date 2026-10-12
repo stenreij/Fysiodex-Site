@@ -1,5 +1,5 @@
 const currentPath = window.location.pathname;
-const jsonPathNavbar = "/shared/navbar/navbar-data.json";
+const jsonPathNavbar = "/shared/json/navbar/navbar-data.json";
 
 fetch(jsonPathNavbar)
     .then((response) => response.json())

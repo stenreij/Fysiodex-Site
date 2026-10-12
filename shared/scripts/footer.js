@@ -1,4 +1,4 @@
-const jsonPathFooter = "/shared/footer/footer-data.json";
+const jsonPathFooter = "/shared/json/footer/footer-data.json";
 
 fetch(jsonPathFooter)
   .then((response) => response.json())

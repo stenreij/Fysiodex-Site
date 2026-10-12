@@ -1,6 +1,6 @@
 const isFysioPage = document.body.classList.contains('role-fysiotherapeut');
 
-// Reset language
+// RESET LANGUAGE
 if (!isFysioPage) {
     localStorage.setItem('fysiodex_language', 'nl');
 }
@@ -11,14 +11,17 @@ let laIcon = null;
 let toggleWrapper = null;
 let translations = {};
 
-// Define the translation files to load
+// DEFINE JSON FILES FOR TRANSLATION
 const translationFiles = [
-    // HOMEPAGE
-    '/shared/json/language/home.json',
+    // HOOFD, NEK & HALS
+    // SCHOUDERS & BOVENARM
+    // THORAX, BUIK & INWENDIGE ORGANEN
+    // ELLEBOO, POLS & HAND
+    // HEUP, BEKKEN & BOVENBEEN
     // KNIE
-    '/fysiotherapeuten/json/knie/knie.json',
-    '/fysiotherapeuten/json/knie/anatomie.json',
-    // OTHER
+    '/fysiotherapeuten/json/language/knie/knie.json',
+    '/fysiotherapeuten/json/language/knie/anatomie.json',
+    // ONDERBEEN, ENKEL & VOET
 ];
 
 // Fetch and load all translation files
@@ -60,6 +63,7 @@ function applyTranslations() {
     });
 }
 
+// SET LANGUAGE
 function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('fysiodex_language', lang);
@@ -88,6 +92,7 @@ function setLanguage(lang) {
     applyTranslations();
 }
 
+// TOGGLE LANGUAGE
 function toggleLanguage() {
     const newLang = currentLanguage === 'nl' ? 'la' : 'nl';
     setLanguage(newLang);
