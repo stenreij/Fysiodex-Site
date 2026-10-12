@@ -1,48 +1,17 @@
-/* ============================================
-   PATHOLOGIEDIAGNOSTIEK.CSS
-   ============================================ */
-
-:root {
-    --card-radius: 8px;
-    --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --card-shadow-hover: 0 8px 24px rgba(23, 102, 170, 0.15);
-    --icon-size: 64px;
-
-    /* Icoon-stijl homepage */
-    --icon-bg: #e8f1fa;
-    --icon-bg-hover: rgba(23, 102, 170, 0.15);
-    --icon-color: var(--primary-blue);
-}
-
-/* Container */
-.container {
-    flex: 1;
-    max-width: 70%;
-    margin: 3rem auto;
-    padding: 0 1rem;
-}
-
-/* Header */
+/* HEADER */
 .page-header {
     text-align: center;
-    margin-bottom: 3rem;
-}
-
-.page-header h1 {
-    color: var(--primary-blue);
-    font-weight: 700;
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
-    margin-bottom: 0.75rem;
+    margin-bottom: 2rem;
 }
 
 .page-header p {
     color: var(--gray-text);
     font-size: clamp(0.95rem, 1.5vw, 1.1rem);
     max-width: 600px;
-    margin: 0 auto;
+    margin: -2rem auto 0 auto;
 }
 
-/* Cards grid - 4 kolommen */
+/* CARDS-GRID */
 .pathologie-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -50,7 +19,7 @@
     padding: 2rem 0;
 }
 
-/* Card */
+/* CARDS */
 .pathologie-card {
     background: var(--white);
     border-radius: var(--card-radius);
@@ -78,7 +47,7 @@
 }
 
 /* ============================================
-   ICON — homepage-stijl (icoon blijft zelfde kleur)
+   CARD-ICON
    ============================================ */
 .pathologie-icon {
     position: absolute;
@@ -131,7 +100,7 @@
 }
 
 /* ============================================
-   MODAL (met iframe) - breder en hoger
+   MODAL
    ============================================ */
 .pathologie-modal {
     position: fixed;

@@ -1,0 +1,225 @@
+/* ============================================
+   OVER-ONS CONTENT
+   ============================================ */
+.over-ons-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-top: 2rem;
+}
+
+.over-ons-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.over-ons-icon {
+    flex-shrink: 0;
+    width: clamp(60px, 8vw, 80px);
+    height: clamp(60px, 8vw, 80px);
+    background: rgba(23, 102, 170, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.over-ons-icon i {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--primary-blue);
+}
+
+.over-ons-item:hover .over-ons-icon {
+    transform: scale(1.05);
+    background: rgba(23, 102, 170, 0.15);
+}
+
+.over-ons-text h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.over-ons-text p {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* ============================================
+   KEUZE SECTIE
+   ============================================ */
+.keuze-intro {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
+    color: #333;
+    text-align: center;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(23, 102, 170, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.feature-icon i {
+    font-size: 1.6rem;
+    color: var(--primary-blue);
+}
+
+.feature-text h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: 0 0 0.5rem 0;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* ============================================
+   CONTACT SECTIE
+   ============================================ */
+.role-section:last-of-type .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-text {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
+    color: #333;
+    text-align: center;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    background: var(--blue-hover);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .role-section {
+        padding: 3rem 0;
+    }
+
+    .over-ons-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .over-ons-text {
+        text-align: center;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .keuze-intro {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .over-ons-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .over-ons-icon i {
+        font-size: 1.2rem;
+    }
+
+    .feature-item {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .contact-button {
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (hover: none) {
+    .over-ons-item:hover .over-ons-icon {
+        transform: none;
+    }
+
+    .feature-item:hover {
+        transform: none;
+    }
+
+    .contact-button:hover {
+        transform: none;
+    }
+}

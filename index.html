@@ -20,7 +20,7 @@
     </nav>
 
     <main id="main-content">
-        <!-- Hero -->
+        <!-- HERO CAROUSEL -->
         <div class="hero-banner" role="banner" aria-label="Welkomstbanner">
             <div class="hero-slides">
                 <div class="hero-slide active">
@@ -56,36 +56,37 @@
             </div>
         </div>
 
-        <!-- Rol-keuze -->
-        <section class="role-cards" aria-labelledby="rol-titel">
-            <h2 id="rol-titel">Wie ben je?</h2>
+        <!-- ROLE SELECTION -->
+        <section class="role-section" data-bg="light" aria-labelledby="rol-titel">
+            <div class="container">
+                <h1 id="rol-titel">Wie ben je?</h1>
+                <div class="card-grid card-grid--role">
+                    <button class="role-card" data-role="fysio" type="button" aria-label="Fysiotherapeut">
+                        <div class="card-banner">
+                            <img src="./shared/img/cards/fysiotherapeut.webp" alt="Fysiotherapeuten" loading="lazy" />
+                        </div>
+                        <div class="card-content">
+                            <h3>Fysiotherapeut</h3>
+                        </div>
+                    </button>
 
-            <div class="role-grid">
-                <button class="role-card" data-role="fysio" type="button" aria-label="Fysiotherapeut">
-                    <div class="card-banner">
-                        <img src="./shared/img/cards/fysiotherapeut.webp" alt="Fysiotherapeuten" loading="lazy" />
-                    </div>
-                    <div class="card-content">
-                        <h3>Fysiotherapeut</h3>
-                    </div>
-                </button>
-
-                <button class="role-card" data-role="patient" type="button" aria-label="Patiënt">
-                    <div class="card-banner">
-                        <img src="./shared/img/cards/patient.webp" alt="Patiënten" loading="lazy" />
-                    </div>
-                    <div class="card-content">
-                        <h3>Patiënt</h3>
-                    </div>
-                </button>
+                    <button class="role-card" data-role="patient" type="button" aria-label="Patiënt">
+                        <div class="card-banner">
+                            <img src="./shared/img/cards/patient.webp" alt="Patiënten" loading="lazy" />
+                        </div>
+                        <div class="card-content">
+                            <h3>Patiënt</h3>
+                        </div>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <!-- Content voor fysiotherapeuten -->
-        <section id="content-fysio" class="role-content" hidden aria-labelledby="fysio-titel">
-            <div class="container-content">
-                <h2 id="fysio-titel">Duik in de fysiotherapie</h2>
-                <div class="cards-container">
+        <!-- CONTENT FYSIOTHERAPEUTEN -->
+        <section id="content-fysio" class="role-section" hidden aria-labelledby="fysio-titel">
+            <div class="container">
+                <h1 id="fysio-titel">Duik in de fysiotherapie</h1>
+                <div class="card-grid card-grid--3">
                     <a href="./fysiotherapeuten/pages/klachtenbeelden/klachtenbeelden.html" class="card"
                         aria-label="Klachtenbeelden bekijken">
                         <div class="card-banner">
@@ -118,16 +119,15 @@
                             <p>Daag jezelf uit met vragen over fysiotherapie.</p>
                         </div>
                     </a>
-
                 </div>
             </div>
         </section>
 
-        <!-- Content voor patiënten -->
-        <section id="content-patient" class="role-content" hidden aria-labelledby="patient-titel">
-            <div class="container-content">
-                <h2 id="patient-titel">Onderzoek je klachten en vind de juiste aanpak</h2>
-                <div class="cards-container">
+        <!-- CONTENT PATIENT -->
+        <section id="content-patient" class="role-section" hidden aria-labelledby="patient-titel">
+            <div class="container">
+                <h1 id="patient-titel">Onderzoek je klachten en vind de juiste aanpak</h1>
+                <div class="card-grid card-grid--3">
                     <a href="./klachten/waarhebiklastvan.html" class="card" aria-label="Waar heb ik last van?">
                         <div class="card-banner">
                             <img src="./shared/img/cards/klachtenbeelden.webp" alt="Waar heb ik last van?"
@@ -158,7 +158,6 @@
                             <p>Versterk je mentale weerbaarheid en leer omgaan met stress.</p>
                         </div>
                     </a>
-
                 </div>
             </div>
         </section>
