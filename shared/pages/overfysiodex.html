@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fysiodex - Homepage</title>
+    <title>Fysiodex - Over Fysiodex</title>
     <meta name="description"
         content="Fysiodex is dé bron voor fysiotherapeuten en iedereen die meer wil leren over spiergezondheid, herstel, voeding en een gezonde levensstijl.">
-    <link rel="icon" type="image/png" href="../shared/img/favicon/faviconfysiodex.png" />
+    <link rel="icon" type="image/png" href="../../shared/img/favicon/faviconfysiodex.png" />
     <link rel="stylesheet" href="../../shared/css/styles.css" />
     <link rel="stylesheet" href="../../shared/css/navbar.css" />
+    <link rel="stylesheet" href="../../shared/css/overfysiodex.css" />
     <link rel="stylesheet" href="../../shared/css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
@@ -19,10 +20,11 @@
         <div class="nav-container"></div>
     </nav>
 
-    <main id="main-content">
-        <div class="container-content">
-            <section class="over-ons" aria-labelledby="over-ons-titel">
-                <h2 id="over-ons-titel">Over Fysiodex</h2>
+    <main>
+        <!-- ABOUT FYSIODEX -->
+        <section class="role-section" aria-labelledby="over-ons-titel">
+            <div class="container">
+                <h1 id="over-ons-titel">Over Fysiodex</h1>
                 <div class="over-ons-content">
                     <article class="over-ons-item">
                         <div class="over-ons-icon" aria-hidden="true">
@@ -71,19 +73,62 @@
                         </div>
                     </article>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
-        <div class="container-content">
-            <section class="keuze" aria-labelledby="keuze-titel">
-                <h2 id="keuze-titel">Waarom kiezen voor Fysiodex?</h2>
-                <p>
-                    Persoonlijke aandacht, wetenschappelijk onderbouwde behandelingen en
-                    een betrokken team maken ons dé keuze voor jouw herstel en
-                    gezondheid.
+        <!-- WHY FYSIODEX -->
+        <section class="role-section" data-bg="light" aria-labelledby="keuze-titel">
+            <div class="container">
+                <h1 id="keuze-titel">Waarom kiezen voor Fysiodex?</h1>
+                <p class="keuze-intro">
+                    Wij maken het verschil met een aanpak die verder gaat dan alleen de klacht.
                 </p>
-            </section>
-        </div>
+
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-user-check" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Persoonlijke aandacht</h3>
+                            <p>Elke behandeling wordt afgestemd op jouw situatie, doelen en tempo.</p>
+                        </div>
+                    </li>
+
+                    <li class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-microscope" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Wetenschappelijk onderbouwd</h3>
+                            <p>Onze behandelingen zijn gebaseerd op de nieuwste inzichten en onderzoek.</p>
+                        </div>
+                    </li>
+
+                    <li class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Betrokken team</h3>
+                            <p>Een team dat met je meedenkt en je begeleidt tijdens je hele herstel.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="role-section" aria-labelledby="contact-titel">
+            <div class="container">
+                <h1 id="contact-titel">Neem Contact Op</h1>
+                <p class="contact-text">
+                    Heb je vragen of wil je meer informatie? Neem gerust contact met ons
+                    op via het onderstaande formulier of bel ons direct.
+                </p>
+                <a href="#" class="contact-button">Contactformulier</a>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
